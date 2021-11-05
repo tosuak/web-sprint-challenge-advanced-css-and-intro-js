@@ -208,17 +208,17 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-  console.log('Task 1', artists[0].name);
+  // console.log('Task 1', artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
-  console.log('Task 1', artists[2].bio);
+  // console.log('Task 1', artists[2].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
   artists[10].name = 'Vincent Van Dough';
-  console.log('Task 2', artists[10].name);
+  // console.log('Task 2', artists[10].name);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -234,7 +234,7 @@ function getArtistByIndex(array, index) {
     return `the artist at index ${index} is ${array[index].name}`
   }
 }
-console.log('Task 3', getArtistByIndex(artists, 0));
+// console.log('Task 3', getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -249,12 +249,11 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array) {
   const newArray = [];
   for(let i = 0; i < array.length; i++){
-    if (array[i].years.includes('1900 - 2000')){
-     array.split('2000');
-     return newArray.push(array);
+    if(array[i].genre === 'Primitivism,Surrealism' && array[i].years >= '1900'|| array[i].genre === 'Surrealism' && array[i].years >= '1900'){
+      newArray.push(array[i].name);
     }
   }
-  return newArray;
+  return newArray
 }
 console.log('Task 4', get20s(artists));
 
@@ -274,7 +273,7 @@ function removeArtist(array, index) {
   }
   return array;
 }
-console.log('Task 5', removeArtist(artists, 0));
+// console.log('Task 5', removeArtist(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -303,7 +302,7 @@ function addArtist(array) {
   });
   return array;
 }
-console.log('Task 6', addArtist(artists));
+// console.log('Task 6', addArtist(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -322,7 +321,7 @@ function lotsOfArt(array) {
   }
   return artistsPainting;
 }
-console.log('Task 7', lotsOfArt(artists));
+// console.log('Task 7', lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
